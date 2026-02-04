@@ -1,15 +1,18 @@
 Introduction
+
 Built with Next.js for handling the user interface, Three.js for rendering 3D elements, Framer motion for beautiful animations, and styled with TailwindCSS, this portfolio demonstrates the developer's skills in a unique manner that creates a lasting impact.
 
 If you're getting started and need assistance or face any bugs, join our active Discord community with over 34k+ members. It's a place where people help each other out.
 
 Tech Stack
+
 Next.js
 Three.js
 Framer Motion
 Tailwind CSS
 
 Features
+
 - Hero: Captivating introduction featuring a spotlight effect and dynamic background.
 
 - Bento Grid: Modern layout presenting personal information using cutting-edge CSS design techniques.
