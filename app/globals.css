@@ -2,6 +2,9 @@
 
 @theme inline {
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+  --color-black-100: #000319;
+  --color-blue-100: #c1c2d3;
+  --color-purple: #cbacf5;
 }
 
 @keyframes spotlight {
@@ -13,5 +16,29 @@
   100% {
     opacity: 1;
     transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+@layer utilities {
+  .bg-grid-black-100 {
+    background-image:
+      linear-gradient(to right,
+        rgba(15, 23, 42, 0.2) 2px,
+        transparent 2px),
+      linear-gradient(to bottom,
+        rgba(15, 23, 42, 0.2) 2px,
+        transparent 2px);
+    background-size: 80px 80px;
+  }
+
+  .bg-grid-white {
+    background-image:
+      linear-gradient(to right,
+        rgba(255, 255, 255, 0.03) 3px,
+        transparent 3px),
+      linear-gradient(to bottom,
+        rgba(255, 255, 255, 0.03) 3px,
+        transparent 3px);
+    background-size: 80px 80px;
   }
 }
