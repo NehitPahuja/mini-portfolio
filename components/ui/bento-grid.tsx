@@ -46,7 +46,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-2 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark: shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4",
+        "row-span-2 relative overflow-hidden rounded-2xl group/bento hover:shadow-xl transition duration-200 shadow-input dark: shadow-none border border-transparent justify-between flex flex-col space-y-4",
         className,
       )}
       style={{
@@ -70,7 +70,7 @@ export const BentoGridItem = ({
             <img
               src={spareImg}
               alt={spareImg}
-              className={'object-cover object-center w-full h-full'}
+              className={'object-cover object-center w-fill h-fill rounded-xl'}
             />
           )}
         </div>
@@ -110,7 +110,7 @@ export const BentoGridItem = ({
               </div>
               <div className="flex flex-col gap-3 lg:gap-2">
                 <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
-                {['Tailwind.css', 'Framer Motion', 'Three.js'].map
+                {['Tailwind.css', 'Three.js', 'Framer Motion'].map
                   ((item) => (
                     <span key={item} className="py-2 lg:py-4 lg:px-5 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
                       {item}
