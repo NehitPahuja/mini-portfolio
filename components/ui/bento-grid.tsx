@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export const BentoGrid = ({
   className,
@@ -52,6 +53,15 @@ export const BentoGridItem = ({
       }}
     >
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
+        <div className="w-full h-full absolute">
+          {img && (
+            <img
+              src={img}
+              alt={title}
+              className={cn(imgClassName, 'object-cover, object-center')}
+            />
+          )}
+        </div>
         {title}
         <div className="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">
           {description}
