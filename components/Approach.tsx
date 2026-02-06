@@ -10,7 +10,7 @@ const Approach = () => {
                 My <span className="text-purple">approach</span>
             </h1>
             {/* remove bg-white dark:bg-black */}
-            <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
+            <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-20">
                 {/* add des prop */}
                 <Card
                     title="Planning & Strategy"
@@ -191,9 +191,12 @@ export const Icon = ({ className, ...rest }: any) => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
+            width={24}
+            height={24}
             strokeWidth="1.5"
             stroke="currentColor"
             className={className}
+            aria-hidden="true"
             {...rest}
         >
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />

@@ -49,7 +49,7 @@ export const gridItems = [
 
     {
         id: 5,
-        title: "Currently building a JS Animation library",
+        title: "Currently building my own website",
         description: "The Inside Scoop",
         className: "md:col-span-3 md:row-span-2",
         imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -72,16 +72,16 @@ export const gridItems = [
 export const projects = [
     {
         id: 1,
-        title: "3D Solar System Planets to Explore",
-        des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+        title: "Basic Resume Builder",
+        des: "A lightweight, browser-based resume builder to quickly draft a professional CV and export it as a PDF.",
         img: "/p1.svg",
         iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
         link: "/ui.earth.com",
     },
     {
         id: 2,
-        title: "Yoom - Video Conferencing App",
-        des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
+        title: "Github Language Detector",
+        des: "A single-page dashboard that showcases GitHub repository language statistics.",
         img: "/p2.svg",
         iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
         link: "/ui.yoom.com",
@@ -107,25 +107,25 @@ export const projects = [
 export const testimonials = [
     {
         quote:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+            "Collaborating with Nehit was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
         name: "Michael Johnson",
         title: "Director of AlphaStream Technologies",
     },
     {
         quote:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+            "Collaborating with Nehit was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
         name: "Michael Johnson",
         title: "Director of AlphaStream Technologies",
     },
     {
         quote:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+            "Collaborating with Nehit was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
         name: "Michael Johnson",
         title: "Director of AlphaStream Technologies",
     },
     {
         quote:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+            "Collaborating with Nehit was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
         name: "Michael Johnson",
         title: "Director of AlphaStream Technologies",
     },
