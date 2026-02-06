@@ -90,9 +90,9 @@ export const projects = [
         id: 3,
         title: "ReXchange",
         des: "ReXchange is a campus marketplace prototype tailored for university students who want to swap or sell second-hand items around campus.",
-        img: "/ReXchange.svg",
+        img: "/p3.svg",
         iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-        link: "https://re-xchange-two.vercel.app/",
+        link: "/ui.aiimg.com",
     },
     {
         id: 4,
