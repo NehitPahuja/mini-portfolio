@@ -3,7 +3,7 @@ import { EncryptedText } from "./ui/encrypted-text";
 import { TextHoverEffect } from "./ui/text-hover-effect";
 
 import MagicButton from "./MagicButton";
-import { Spotlight } from "./SpotLight";
+import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
