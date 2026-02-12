@@ -85,7 +85,7 @@ export const InfiniteMovingCards = ({
                     pauseOnHover && "hover:[animation-play-state:paused]"
                 )}
             >
-                {items.map((item, idx) => (
+                {items.map((item, idx) => ((
                     <li
                         className="w-[90vw] max-w-full relative rounded-2xl border border-b-0
              flex-shrink-0 border-slate-800 p-5 md:p-16 md:w-[60vw]"
@@ -106,22 +106,25 @@ export const InfiniteMovingCards = ({
                             </span>
                             <div className="relative z-20 mt-6 flex flex-row items-center">
                                 <div className="me-3">
-                                    <img src="/profile.svg" alt="profile" />
+                                    <img src="/aryan.jpg" alt="profile" />
                                 </div>
-                                <span className="flex flex-col gap-1">
-                                    {/* change text color, font-normal to font-bold, text-xl */}
-                                    <span className="text-xl font-bold leading-[1.6] text-white">
-                                        {item.name}
+                                <div className="relative z-20 mt-6 flex flex-row items-center">
+                                    <div className="me-3">
+                                        <img src="/profile.svg" alt="profile" />
+                                    </div>
+                                    <span className="flex flex-col gap-1">
+                                        <span className="text-xl font-bold leading-[1.6] text-white">
+                                            {item.name}
+                                        </span>
+                                        <span className=" text-sm leading-[1.6] text-white-200 font-normal">
+                                            {item.title}
+                                        </span>
                                     </span>
-                                    {/* change text color */}
-                                    <span className=" text-sm leading-[1.6] text-white-200 font-normal">
-                                        {item.title}
-                                    </span>
-                                </span>
+                                </div>
                             </div>
                         </blockquote>
                     </li>
-                ))}
+                )))}
             </ul>
         </div>
     );

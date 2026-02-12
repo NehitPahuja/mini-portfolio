@@ -1,20 +1,23 @@
 @import "tailwindcss";
 
 @theme inline {
-  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
   --color-black-100: #000319;
   --color-blue-100: #c1c2d3;
   --color-purple: #cbacf5;
-}
 
-@import "tailwindcss";
-
-@theme inline {
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
   --animate-first: moveVertical 30s ease infinite;
   --animate-second: moveInCircle 20s reverse infinite;
   --animate-third: moveInCircle 40s linear infinite;
   --animate-fourth: moveHorizontal 40s ease infinite;
   --animate-fifth: moveInCircle 20s ease infinite;
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
 }
 
 @keyframes moveHorizontal {
