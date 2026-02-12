@@ -74,7 +74,7 @@ export const projects = [
         id: 1,
         title: "Basic Resume Builder",
         des: "A lightweight, browser-based resume builder to quickly draft a professional CV and export it as a PDF.",
-        img: "/p1.svg",
+        img: "/r2.png",
         iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
         link: "/ui.earth.com",
     },
@@ -82,15 +82,15 @@ export const projects = [
         id: 2,
         title: "Github Language Detector",
         des: "A single-page dashboard that showcases GitHub repository language statistics.",
-        img: "/p2.svg",
+        img: "/r3.png",
         iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-        link: "/ui.yoom.com",
+        link: "/ui.https://github-language-detector.vercel.app/.com",
     },
     {
         id: 3,
         title: "ReXchange",
         des: "ReXchange is a campus marketplace prototype tailored for university students who want to swap or sell second-hand items around campus.",
-        img: "/p3.svg",
+        img: "/r1.png",
         iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
         link: "/ui.aiimg.com",
     },
@@ -107,7 +107,7 @@ export const projects = [
 export const testimonials = [
     {
         quote:
-            "Collaborating with Nehit was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+            "Collaborating with Nehit was an absolute pleasure. His rofessionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
         name: "Michael Johnson",
         title: "Director of AlphaStream Technologies",
     },
@@ -119,7 +119,7 @@ export const testimonials = [
     },
     {
         quote:
-            "Collaborating with Nehit was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+            "Collaborating with Nehit was an absolute pleasure. His proessionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
         name: "Michael Johnson",
         title: "Director of AlphaStream Technologies",
     },
@@ -171,35 +171,35 @@ export const companies = [
 ];
 
 export const workExperience = [
-    {
-        id: 1,
-        title: "Frontend Engineer Intern",
-        desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
-        className: "md:col-span-2",
-        thumbnail: "/exp1.svg",
+    {//
+        // id: 1,
+        //  title: "Frontend Engineer Intern",
+        //   desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+        //  className: "md:col-span-2",
+        //  thumbnail: "/exp1.svg",//
     },
     {
-        id: 2,
-        title: "Mobile App Dev - JSM Tech",
-        desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-        className: "md:col-span-2", // change to md:col-span-2
-        thumbnail: "/exp2.svg",
+        //  id: 2,
+        //  title: "Mobile App Dev - JSM Tech",
+        //  desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+        //className: "md:col-span-2", // change to md:col-span-2
+        //thumbnail: "/exp2.svg",
     },
     {
         id: 3,
-        title: "Freelance App Dev Project",
-        desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-        className: "md:col-span-2", // change to md:col-span-2
-        thumbnail: "/exp3.svg",
+        //  title: "Freelance App Dev Project",
+        //  desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+        //  className: "md:col-span-2", // change to md:col-span-2
+        //  thumbnail: "/exp3.svg",
     },
     {
         id: 4,
-        title: "Lead Frontend Developer",
-        desc: "Developed and maintained user-facing features using modern frontend technologies.",
-        className: "md:col-span-2",
-        thumbnail: "/exp4.svg",
+        //  title: "Lead Frontend Developer",
+        //  desc: "Developed and maintained user-facing features using modern frontend technologies.",
+        //  className: "md:col-span-2",
+        //  thumbnail: "/exp4.svg",
     },
-];
+];//
 
 export const socialMedia = [
     {
@@ -213,5 +213,6 @@ export const socialMedia = [
     {
         id: 3,
         img: "/link.svg",
+        link: "https://www.linkedin.com/in/nehit-pahuja-375a61232/"
     },
 ];
