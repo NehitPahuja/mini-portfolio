@@ -56,8 +56,6 @@ export const EncryptedText: React.FC<EncryptedTextProps> = ({
 
   useEffect(() => {
     if (!isInView) return;
-
-    // Reset state for a fresh animation whenever dependencies change
     const initial = text
       ? generateGibberishPreservingSpaces(text, charset)
       : "";
@@ -83,8 +81,6 @@ export const EncryptedText: React.FC<EncryptedTextProps> = ({
       if (currentRevealCount >= totalLength) {
         return;
       }
-
-      // Re-randomize unrevealed scramble characters on an interval
       const timeSinceLastFlip = now - lastFlipTimeRef.current;
       if (timeSinceLastFlip >= Math.max(0, flipDelayMs)) {
         for (let index = 0; index < totalLength; index += 1) {

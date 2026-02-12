@@ -98,7 +98,7 @@ export const projects = [
         id: 4,
         title: "Coming soon...",
         des: "",
-        img: "/p4.svg",
+        img: "/white.png",
         iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
         link: "/ui.apple.com",
     },
@@ -113,7 +113,7 @@ export const testimonials = [
     },
     {
         quote:
-            "Collaborating with Nehit was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+            "Nehit is someone I truly respect both professionally and personally. He approaches every task with focus and a strong problem-solving mindset, always aiming to deliver quality work. What really stands out is his calm, dependable nature and his ability to collaborate smoothly with others. He’s not only skilled but also brings a positive attitude that makes working with him a great experience.",
         name: "Rayna Manchanda",
         title: "Student at BML Munjal University",
     },
@@ -170,11 +170,11 @@ export const companies = [
     },
 ];
 
-export const workExperience = [
+export const WorkExperience = [
     {
         id: 1,
-        title: "Frontend Engineer Intern",
-        desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+        title: "Contributor - Hacktober Fest",
+        desc: "- Helped improve the UI for a collaborative Notepad website and Changed the logo for an assignment helper app",
         className: "md:col-span-2",
         thumbnail: "/exp1.svg",
     },
