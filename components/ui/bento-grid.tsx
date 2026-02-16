@@ -1,8 +1,10 @@
+"use client";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
-import { Globe } from "./globe";
 import { GlobeDemo } from "./GridGlobe";
+import { useState } from "react";
+import MagicButton from "../MagicButton";
+import { IoCopyOutline } from "react-icons/io5";
 
 export const BentoGrid = ({
   className,
@@ -15,7 +17,7 @@ export const BentoGrid = ({
     <div
       className={cn(
         "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
-        className,
+        className
       )}
     >
       {children}
@@ -32,7 +34,6 @@ export const BentoGridItem = ({
   titleClassName,
   img,
   spareImg,
-
 }: {
   className?: string;
   title?: string | React.ReactNode;
@@ -43,11 +44,19 @@ export const BentoGridItem = ({
   spareImg?: string;
   id?: number;
 }) => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    const text = "nehitpahuja@gmail.com";
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+  };
+
   return (
     <div
       className={cn(
-        "row-span-2 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl p-0 transition duration-200 shadow-input dark: shadow-none border border-transparent justify-between flex flex-col space-y-4",
-        className,
+        "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 border border-white/[0.1]",
+        className
       )}
       style={{
         background: "rgb(4,7,29)",
@@ -65,18 +74,20 @@ export const BentoGridItem = ({
             />
           )}
         </div>
-        <div className={`absolute right-0 -bottom-5 ${id === 5 && 'w-full opacity-80'}`}>
+        <div
+          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
+            } `}
+        >
           {spareImg && (
             <img
               src={spareImg}
               alt={spareImg}
-              className={'object-cover object-center w-fill h-fill rounded-xl'}
+              className="object-cover object-center w-full h-full"
             />
           )}
         </div>
         {id === 6 && (
-          <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+          <BackgroundGradientAnimation containerClassName="absolute z-0 inset-0 h-full w-full">
           </BackgroundGradientAnimation>
         )}
 
@@ -100,23 +111,46 @@ export const BentoGridItem = ({
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:right-2">
               <div className="flex flex-col gap-3 lg:gap-2">
-                {['React.js', 'Next.js', 'TypeScript'].map
-                  ((item) => (
-                    <span key={item} className="py-2 lg:py-4 lg:px-5 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
-                      {item}
-                    </span>
-                  ))}
+                {["React.js", "Next.js", "TypeScript"].map((item) => (
+                  <span
+                    key={item}
+                    className="py-2 lg:py-4 lg:px-5 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  >
+                    {item}
+                  </span>
+                ))}
                 <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
               </div>
               <div className="flex flex-col gap-3 lg:gap-2">
                 <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
-                {['Tailwind.css', 'Framer Motion', 'Three.js'].map
-                  ((item) => (
-                    <span key={item} className="py-2 lg:py-4 lg:px-5 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
-                      {item}
-                    </span>
-                  ))}
+                {["TailwindCSS", "Framer", "Three.js"].map((item) => (
+                  <span
+                    key={item}
+                    className="py-2 lg:py-4 lg:px-5 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  >
+                    {item}
+                  </span>
+                ))}
               </div>
+            </div>
+          )}
+          {id === 6 && (
+            <div className="mt-5 relative">
+              <div
+                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
+                  }`}
+              >
+                {/* <img src="/confetti.gif" alt="confetti" /> */}
+                {/* <Lottie options={defaultOptions} height={200} width={400} /> */}
+              </div>
+
+              <MagicButton
+                title={copied ? "Email is Copied!" : "Copy my email address"}
+                icon={<IoCopyOutline />}
+                position="left"
+                handleClick={handleCopy}
+                otherClasses="!bg-[#161A31]"
+              />
             </div>
           )}
         </div>
