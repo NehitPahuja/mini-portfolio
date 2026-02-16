@@ -76,7 +76,7 @@ export const projects = [
         des: "A lightweight, browser-based resume builder to quickly draft a professional CV and export it as a PDF.",
         img: "/r2.png",
         iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-        link: "/ui.earth.com",
+        link: "https://github.com/NehitPahuja/Basic-Resume-Builder",
     },
     {
         id: 2,
@@ -84,7 +84,7 @@ export const projects = [
         des: "A single-page dashboard that showcases GitHub repository language statistics.",
         img: "/r3.png",
         iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-        link: "/ui.https://github-language-detector.vercel.app/.com",
+        link: "https://github.com/NehitPahuja/Github-Language-Detector",
     },
     {
         id: 3,
@@ -92,7 +92,7 @@ export const projects = [
         des: "ReXchange is a campus marketplace prototype tailored for university students who want to swap or sell second-hand items around campus.",
         img: "/r1.png",
         iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-        link: "/ui.aiimg.com",
+        link: "https://github.com/NehitPahuja/ReXchange",
     },
     {
         id: 4,
@@ -100,7 +100,7 @@ export const projects = [
         des: "",
         img: "/white.png",
         iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-        link: "/ui.apple.com",
+        link: "https://github.com/NehitPahuja",
     },
 ];
 
