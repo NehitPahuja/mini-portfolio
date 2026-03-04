@@ -91,7 +91,7 @@ export const projects = [
         title: "ReXchange",
         des: "ReXchange is a campus marketplace prototype tailored for university students who want to swap or sell second-hand items around campus.",
         img: "/r1.png",
-        iconLists: ["/html.svg", "/css.svg", "/"],
+        iconLists: ["/html.svg", "/css.svg", "/java.svg"],
         link: "https://github.com/NehitPahuja/ReXchange",
     },
     {
