@@ -83,7 +83,7 @@ export const projects = [
         title: "Github Language Detector",
         des: "A single-page dashboard that showcases GitHub repository language statistics.",
         img: "/r3.png",
-        iconLists: [/* add your icon paths here, e.g. "/icon.svg" */],
+        iconLists: ["/html.svg"],
         link: "https://github.com/NehitPahuja/Github-Language-Detector",
     },
     {
@@ -91,7 +91,7 @@ export const projects = [
         title: "ReXchange",
         des: "ReXchange is a campus marketplace prototype tailored for university students who want to swap or sell second-hand items around campus.",
         img: "/r1.png",
-        iconLists: [/* add your icon paths here, e.g. "/icon.svg" */],
+        iconLists: ["/html.svg", "/css.svg", "/"],
         link: "https://github.com/NehitPahuja/ReXchange",
     },
     {
