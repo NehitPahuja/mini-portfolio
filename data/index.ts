@@ -75,7 +75,7 @@ export const projects = [
         title: "Basic Resume Builder",
         des: "A lightweight, browser-based resume builder to quickly draft a professional CV and export it as a PDF.",
         img: "/r2.png",
-        iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+        iconLists: [/* add your icon paths here, e.g. "/icon.svg" */],
         link: "https://github.com/NehitPahuja/Basic-Resume-Builder",
     },
     {
@@ -83,7 +83,7 @@ export const projects = [
         title: "Github Language Detector",
         des: "A single-page dashboard that showcases GitHub repository language statistics.",
         img: "/r3.png",
-        iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+        iconLists: [/* add your icon paths here, e.g. "/icon.svg" */],
         link: "https://github.com/NehitPahuja/Github-Language-Detector",
     },
     {
@@ -91,7 +91,7 @@ export const projects = [
         title: "ReXchange",
         des: "ReXchange is a campus marketplace prototype tailored for university students who want to swap or sell second-hand items around campus.",
         img: "/r1.png",
-        iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+        iconLists: [/* add your icon paths here, e.g. "/icon.svg" */],
         link: "https://github.com/NehitPahuja/ReXchange",
     },
     {
@@ -99,7 +99,7 @@ export const projects = [
         title: "Coming soon...",
         des: "",
         img: "/white.png",
-        iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+        iconLists: [/* add your icon paths here, e.g. "/icon.svg" */],
         link: "https://github.com/NehitPahuja",
     },
 ];
