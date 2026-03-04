@@ -15,14 +15,14 @@ const RecentProjects = () => {
             <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
                 {projects.map((item) => (
                     <div
-                        className="lg:min-h-[32.5rem] h-[32rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
+                        className="lg:min-h-[32.5rem] h-[25rem] sm:h-[32rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
                         key={item.id}
                     >
                         <PinContainer
                             title={item.link}
                             href={item.link}
                         >
-                            <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden h-[30vh] lg:h-[30vh] mb-10">
+                            <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden h-[20vh] sm:h-[30vh] lg:h-[30vh] mb-10">
                                 <div
                                     className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                                     style={{ backgroundColor: "#13162D" }}
