@@ -75,7 +75,7 @@ export const projects = [
         title: "Basic Resume Builder",
         des: "A lightweight, browser-based resume builder to quickly draft a professional CV and export it as a PDF.",
         img: "/r2.png",
-        iconLists: [/* add your icon paths here, e.g. "/icon.svg" */],
+        iconLists: ["/js.svg", "/css.svg", "/html.svg"],
         link: "https://github.com/NehitPahuja/Basic-Resume-Builder",
     },
     {
