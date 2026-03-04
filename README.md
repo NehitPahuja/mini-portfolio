@@ -1,30 +1,52 @@
-1. Introduction
+````markdown
+# Mini Portfolio 🌟
 
-Built with Next.js for handling the user interface, Three.js for rendering 3D elements, Framer motion for beautiful animations, and styled with TailwindCSS, this portfolio demonstrates the developer's skills     in a unique manner that creates a lasting impact.
+A simple and modern **personal portfolio website** built to showcase your skills, projects, and contact information. It’s designed to be clean, responsive, and visually appealing — perfect for sharing your work with employers, friends, or collaborators.
 
-If you're getting started and need assistance or face any bugs, join our active Discord community with over 34k+ members. It's a place where people help each other out.
+🔗 **Live Demo:** https://nehitpahuja.vercel.app
 
-2. Tech Stack
+---
 
- Next.js
- Three.js
- Framer Motion
- Tailwind CSS
+## 🚀 About The Project
 
-3. Features
+This mini portfolio website is a frontend project that highlights:
 
- - Hero: Captivating introduction featuring a spotlight effect and dynamic background.
+- Your **About Me** section  
+- Your **Skills & Technologies**
+- Showcase of **Projects**  
+- Your **Contact Information**
 
- - Bento Grid: Modern layout presenting personal information using cutting-edge CSS design techniques.
- 
- - 3D Elements: Interactive 3D design elements, such as a GitHub-style globe and card hover effects, adding depth and engagement.
+It’s built with modern web technologies and optimised for responsiveness across all devices.
 
- - Testimonials: Dynamic testimonials area with scrolling or animated content for enhanced engagement.
+---
 
- - Work Experience: Prominent display of professional background for emphasis and credibility.
+## 🛠 Technologies Used
 
-- Canvas Effect: Innovative use of HTML5 canvas to create visually striking effects in the "approaches" section.
+This project uses the following:
 
-- Responsiveness: Seamless adaptability across all devices, ensuring optimal viewing experience for every user.
+| Technology | Purpose |
+|------------|---------|
+| Next.js | React framework for fast UI and routing |
+| Tailwind CSS | Utility-first CSS for rapid styling |
+| TypeScript | Strong typing for more reliable code |
+| Vercel | Deployment platform |
 
-  and many more, including code architecture and reusability
+---
+
+## 🎯 Features
+
+✔ Responsive layout — looks great on mobile and desktop  
+✔ Modern UI components for clean design  
+✔ Easy to update and customise  
+✔ Minimal and lightweight for fast performance  
+
+## 📫 Contact Me
+
+If you want to get in touch:
+
+* 📧 Email: [nehitpahuja@gmail.com](mailto:nehitpahuja@gmail.com)
+* 🔗 GitHub: [https://github.com/NehitPahuja](https://github.com/NehitPahuja)
+* 🔗 Website: [https://nehitpahuja.vercel.app](https://nehitpahuja.vercel.app)
+
+
+
