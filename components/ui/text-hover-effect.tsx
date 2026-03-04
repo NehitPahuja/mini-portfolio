@@ -39,9 +39,7 @@ export const TextHoverEffect = ({
         className
       )}
     >
-      {/* Container for the stacked text layers */}
       <div className="relative grid place-items-center w-full">
-        {/* Base Layer: Outlined Text */}
         <motion.div
           className="col-start-1 row-start-1 text-neutral-200 dark:text-neutral-800 font-bold font-[helvetica]"
           initial={{ opacity: 0 }}
@@ -50,19 +48,10 @@ export const TextHoverEffect = ({
           style={{
             WebkitTextStroke: "1px currentColor",
             color: "transparent",
-            // Allow pointer events to pass through if needed, but here it's fine
           }}
         >
           {text}
         </motion.div>
-
-        {/* Reveal Layer: Gradient Text with Mask */}
-        {/* We need the gradient text to be always rendered BUT masked? 
-            If 'hovered' is false, we might want to hide it completely to avoid glitching at 0,0.
-            But simply conditionally rendering content {hovered ? text : text} works.
-            Wait, if I render 'null', the layout size might jump if this layer was dictating size?
-            Since it's in a grid with the Base Layer (which has same content), the size is preserved by Base Layer.
-        */}
         <div
           className="col-start-1 row-start-1 font-bold font-[helvetica] text-transparent bg-clip-text pointer-events-none"
           aria-hidden="true"
