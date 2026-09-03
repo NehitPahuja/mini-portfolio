@@ -8,7 +8,7 @@ export const navItems = [
 export const gridItems = [
     {
         id: 1,
-        title: "I prioritize client collaboration, fostering open communication ",
+        title: "I prioritize being committed, while being detail oriented ",
         description: "",
         className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
         imgClassName: "w-full h-full",
@@ -18,7 +18,7 @@ export const gridItems = [
     },
     {
         id: 2,
-        title: "I'm very flexible with time zone communications",
+        title: "I'm very flexible time based communications",
         description: "",
         className: "lg:col-span-2 md:col-span-3 md:row-span-2",
         imgClassName: "",
@@ -50,7 +50,7 @@ export const gridItems = [
     {
         id: 5,
         title: "Currently building my own website",
-        description: "The Inside Scoop",
+        description: "",
         className: "md:col-span-3 md:row-span-2",
         imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
         titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -117,24 +117,6 @@ export const testimonials = [
         name: "Rayna Manchanda",
         title: "Student at BML Munjal University",
     },
-    {
-        quote:
-            "Collaborating with Nehit was an absolute pleasure. His proessionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        name: "Michael Johnson",
-        title: "Director of AlphaStream Technologies",
-    },
-    {
-        quote:
-            "Collaborating with Nehit was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Nehit is the ideal partner.",
-        name: "Michael Johnson",
-        title: "Director of AlphaStream Technologies",
-    },
-    {
-        quote:
-            "Collaborating with Nehit was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Nehit's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Nehit is the ideal partner.",
-        name: "Aryan Raj Gupta",
-        title: "Student at SRM",
-    },
 ];
 
 export const companies = [
@@ -144,23 +126,12 @@ export const companies = [
         img: "/cloud.svg",
         nameImg: "/cloudName.svg",
     },
-    {
-        id: 2,
-        name: "appwrite",
-        img: "/app.svg",
-        nameImg: "/appName.svg",
-    },
+
     {
         id: 3,
         name: "HOSTINGER",
         img: "/host.svg",
         nameImg: "/hostName.svg",
-    },
-    {
-        id: 4,
-        name: "stream",
-        img: "/s.svg",
-        nameImg: "/streamName.svg",
     },
     {
         id: 5,
@@ -171,30 +142,37 @@ export const companies = [
 ];
 
 export const WorkExperience = [
-    {
+      {
         id: 1,
+        title: "AI solutions Audit intern at HCLTech",
+        desc: "- Audited locally run AI models",
+        className: "md:col-span-2",
+        thumbnail: "/exp1.svg",
+    },
+    {
+        id: 2,
         title: "Contributor - Hacktober Fest",
         desc: "- Helped improve the UI for a collaborative Notepad website and Changed the logo for an assignment helper app",
         className: "md:col-span-2",
         thumbnail: "/exp1.svg",
     },
     {
-        id: 2,
+        id: 3,
         title: "Video Editor - 6Pistons Media",
         desc: "- Helping rebuild 6Pistons social media presence",
         className: "md:col-span-2", // change to md:col-span-2
         thumbnail: "/exp2.svg",
     },
     {
-        id: 3,
+        id: 4,
         title: "Creative Director - Deryl.in",
         desc: "- Shot, edited, and posted content for social media, Directed creative video concepts for brand engagement, Managed post-production workflow to ensure high-quality output",
         className: "md:col-span-2", // change to md:col-span-2
         thumbnail: "/exp3.svg",
     },
     {
-        id: 4,
-        title: "Volunteer - AARUUSH",
+        id: 5,
+        title: "Committee Head @ creatives - AARUUSH",
         desc: "- Helped manage and organize SRM RUN 7.0 ",
         className: "md:col-span-2",
         thumbnail: "/exp4.svg",
