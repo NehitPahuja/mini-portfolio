@@ -221,23 +221,30 @@ export function Globe({ globeConfig, data }: WorldProps) {
 }
 
 export function WebGLRendererConfig() {
-    const { gl, size } = useThree();
+    const { gl } = useThree();
 
+    // Canvas already handles sizing and pixel ratio (see `dpr` below); calling
+    // setSize/setPixelRatio here forced an extra full-resolution resize on mount.
     useEffect(() => {
-        gl.setPixelRatio(window.devicePixelRatio);
-        gl.setSize(size.width, size.height);
         gl.setClearColor(0xffaaff, 0);
-    }, [gl, size.width, size.height]);
+    }, [gl]);
 
     return null;
 }
 
 export function World(props: WorldProps) {
     const { globeConfig } = props;
-    const scene = new Scene();
-    scene.fog = new Fog(0xffffff, 400, 2000);
+    // Create the scene and camera once instead of on every render.
+    const [scene] = useState(() => {
+        const s = new Scene();
+        s.fog = new Fog(0xffffff, 400, 2000);
+        return s;
+    });
+    const [camera] = useState(
+        () => new PerspectiveCamera(50, aspect, 180, 1800),
+    );
     return (
-        <Canvas scene={scene} camera={new PerspectiveCamera(50, aspect, 180, 1800)}>
+        <Canvas scene={scene} camera={camera} dpr={[1, 2]}>
             <WebGLRendererConfig />
             <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
             <directionalLight
