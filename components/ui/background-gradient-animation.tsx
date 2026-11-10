@@ -1,6 +1,10 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useSyncExternalStore } from "react";
+
+const subscribeNoop = () => () => {};
+const isSafariUA = () => /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+const isSafariServer = () => false;
 
 export const BackgroundGradientAnimation = ({
   gradientBackgroundStart = "rgb(108, 0, 162)",
@@ -34,11 +38,9 @@ export const BackgroundGradientAnimation = ({
   containerClassName?: string;
 }) => {
   const interactiveRef = useRef<HTMLDivElement>(null);
+  const current = useRef({ x: 0, y: 0 });
+  const target = useRef({ x: 0, y: 0 });
 
-  const [curX, setCurX] = useState(0);
-  const [curY, setCurY] = useState(0);
-  const [tgX, setTgX] = useState(0);
-  const [tgY, setTgY] = useState(0);
   useEffect(() => {
     document.body.style.setProperty(
       "--gradient-background-start",
@@ -56,35 +58,46 @@ export const BackgroundGradientAnimation = ({
     document.body.style.setProperty("--pointer-color", pointerColor);
     document.body.style.setProperty("--size", size);
     document.body.style.setProperty("--blending-value", blendingValue);
-  }, []);
+  }, [
+    gradientBackgroundStart,
+    gradientBackgroundEnd,
+    firstColor,
+    secondColor,
+    thirdColor,
+    fourthColor,
+    fifthColor,
+    pointerColor,
+    size,
+    blendingValue,
+  ]);
 
+  // Ease the pointer blob towards the cursor on every frame without touching React state.
   useEffect(() => {
-    function move() {
-      if (!interactiveRef.current) {
-        return;
+    if (!interactive) return;
+    let frame = 0;
+    const move = () => {
+      const el = interactiveRef.current;
+      if (el) {
+        current.current.x += (target.current.x - current.current.x) / 20;
+        current.current.y += (target.current.y - current.current.y) / 20;
+        el.style.transform = `translate(${Math.round(current.current.x)}px, ${Math.round(
+          current.current.y
+        )}px)`;
       }
-      setCurX(curX + (tgX - curX) / 20);
-      setCurY(curY + (tgY - curY) / 20);
-      interactiveRef.current.style.transform = `translate(${Math.round(
-        curX
-      )}px, ${Math.round(curY)}px)`;
-    }
-
-    move();
-  }, [tgX, tgY]);
+      frame = requestAnimationFrame(move);
+    };
+    frame = requestAnimationFrame(move);
+    return () => cancelAnimationFrame(frame);
+  }, [interactive]);
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (interactiveRef.current) {
       const rect = interactiveRef.current.getBoundingClientRect();
-      setTgX(event.clientX - rect.left);
-      setTgY(event.clientY - rect.top);
+      target.current = { x: event.clientX - rect.left, y: event.clientY - rect.top };
     }
   };
 
-  const [isSafari, setIsSafari] = useState(false);
-  useEffect(() => {
-    setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
-  }, []);
+  const isSafari = useSyncExternalStore(subscribeNoop, isSafariUA, isSafariServer);
 
   return (
     <div

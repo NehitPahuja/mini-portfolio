@@ -1,6 +1,5 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import { EncryptedText } from "./ui/encrypted-text";
-import { TextHoverEffect } from "./ui/text-hover-effect";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";

@@ -99,7 +99,7 @@ export const projects = [
         title: "Coming soon...",
         des: "",
         img: "/white.png",
-        iconLists: [/* add your icon paths here, e.g. "/icon.svg" */],
+        iconLists: [],
         link: "https://github.com/NehitPahuja",
     },
 ];
@@ -107,7 +107,7 @@ export const projects = [
 export const testimonials = [
     {
         quote:
-            "Collaborating with Nehit was an absolute pleasure. His rofessionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Nehit's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Nehit is the ideal partner.",
+            "Collaborating with Nehit was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Nehit's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Nehit is the ideal partner.",
         name: "Aryan Raj Gupta",
         title: "Student at SRM",
     },
@@ -160,14 +160,14 @@ export const WorkExperience = [
         id: 3,
         title: "Video Editor - 6Pistons Media",
         desc: "- Helping rebuild 6Pistons social media presence",
-        className: "md:col-span-2", // change to md:col-span-2
+        className: "md:col-span-2",
         thumbnail: "/exp2.svg",
     },
     {
         id: 4,
         title: "Creative Director - Deryl.in",
         desc: "- Shot, edited, and posted content for social media, Directed creative video concepts for brand engagement, Managed post-production workflow to ensure high-quality output",
-        className: "md:col-span-2", // change to md:col-span-2
+        className: "md:col-span-2",
         thumbnail: "/exp3.svg",
     },
     {
@@ -182,15 +182,20 @@ export const WorkExperience = [
 export const socialMedia = [
     {
         id: 1,
+        name: "GitHub",
         img: "/git.svg",
+        link: "https://github.com/NehitPahuja",
     },
     {
         id: 2,
+        name: "Twitter",
         img: "/twit.svg",
+        link: "",
     },
     {
         id: 3,
+        name: "LinkedIn",
         img: "/link.svg",
-        link: "https://www.linkedin.com/in/nehit-pahuja-375a61232/"
+        link: "https://www.linkedin.com/in/nehit-pahuja-375a61232/",
     },
 ];
