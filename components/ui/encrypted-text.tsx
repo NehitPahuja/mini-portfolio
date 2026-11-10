@@ -34,6 +34,14 @@ function generateGibberishPreservingSpaces(
   return result;
 }
 
+// Deterministic scramble used for the very first render so the server-rendered
+// HTML matches the client's hydration pass (Math.random would differ).
+function generateInitialScramble(original: string, charset: string): string[] {
+  return original
+    .split("")
+    .map((ch, i) => (ch === " " ? " " : charset.charAt(i % charset.length)));
+}
+
 export const EncryptedText: React.FC<EncryptedTextProps> = ({
   text,
   className,
@@ -50,19 +58,17 @@ export const EncryptedText: React.FC<EncryptedTextProps> = ({
   const animationFrameRef = useRef<number | null>(null);
   const startTimeRef = useRef<number>(0);
   const lastFlipTimeRef = useRef<number>(0);
-  const scrambleCharsRef = useRef<string[]>(
-    text ? generateGibberishPreservingSpaces(text, charset).split("") : [],
+  const [scrambleChars, setScrambleChars] = useState<string[]>(() =>
+    text ? generateInitialScramble(text, charset) : [],
   );
 
   useEffect(() => {
     if (!isInView) return;
-    const initial = text
-      ? generateGibberishPreservingSpaces(text, charset)
-      : "";
-    scrambleCharsRef.current = initial.split("");
+    let scramble = text
+      ? generateGibberishPreservingSpaces(text, charset).split("")
+      : [];
     startTimeRef.current = performance.now();
     lastFlipTimeRef.current = startTimeRef.current;
-    setRevealCount(0);
 
     let isCancelled = false;
 
@@ -83,16 +89,11 @@ export const EncryptedText: React.FC<EncryptedTextProps> = ({
       }
       const timeSinceLastFlip = now - lastFlipTimeRef.current;
       if (timeSinceLastFlip >= Math.max(0, flipDelayMs)) {
-        for (let index = 0; index < totalLength; index += 1) {
-          if (index >= currentRevealCount) {
-            if (text[index] !== " ") {
-              scrambleCharsRef.current[index] =
-                generateRandomCharacter(charset);
-            } else {
-              scrambleCharsRef.current[index] = " ";
-            }
-          }
-        }
+        scramble = scramble.map((existing, index) => {
+          if (index < currentRevealCount) return existing;
+          return text[index] === " " ? " " : generateRandomCharacter(charset);
+        });
+        setScrambleChars(scramble);
         lastFlipTimeRef.current = now;
       }
 
@@ -116,7 +117,6 @@ export const EncryptedText: React.FC<EncryptedTextProps> = ({
       ref={ref}
       className={cn(className)}
       aria-label={text}
-      role="text"
     >
       {text.split("").map((char, index) => {
         const isRevealed = index < revealCount;
@@ -124,8 +124,7 @@ export const EncryptedText: React.FC<EncryptedTextProps> = ({
           ? char
           : char === " "
             ? " "
-            : (scrambleCharsRef.current[index] ??
-              generateRandomCharacter(charset));
+            : (scrambleChars[index] ?? charset.charAt(0));
 
         return (
           <span

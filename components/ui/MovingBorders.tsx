@@ -6,7 +6,7 @@ import {
     useMotionTemplate,
     useMotionValue,
     useTransform,
-} from "framer-motion";
+} from "motion/react";
 import { useRef } from "react";
 import { cn } from "@/lib/utils";
 
@@ -22,12 +22,12 @@ export function Button({
 }: {
     borderRadius?: string;
     children: React.ReactNode;
-    as?: any;
+    as?: "button" | "div" | "a";
     containerClassName?: string;
     borderClassName?: string;
     duration?: number;
     className?: string;
-    [key: string]: any;
+    [key: string]: unknown;
 }) {
     return (
         <Component
@@ -41,7 +41,7 @@ export function Button({
             {...otherProps}
         >
             <div
-                className="absolute inset-0 rounde-[1.75rem]"
+                className="absolute inset-0"
                 style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
             >
                 <MovingBorder duration={duration} rx="30%" ry="30%">
@@ -80,9 +80,9 @@ export const MovingBorder = ({
     duration?: number;
     rx?: string;
     ry?: string;
-    [key: string]: any;
+    [key: string]: unknown;
 }) => {
-    const pathRef = useRef<any>(null);
+    const pathRef = useRef<SVGRectElement>(null);
     const progress = useMotionValue<number>(0);
 
     useAnimationFrame((time) => {
@@ -95,11 +95,11 @@ export const MovingBorder = ({
 
     const x = useTransform(
         progress,
-        (val) => pathRef.current?.getPointAtLength(val).x
+        (val) => pathRef.current?.getPointAtLength(val).x ?? 0
     );
     const y = useTransform(
         progress,
-        (val) => pathRef.current?.getPointAtLength(val).y
+        (val) => pathRef.current?.getPointAtLength(val).y ?? 0
     );
 
     const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;

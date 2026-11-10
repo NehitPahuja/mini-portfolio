@@ -1,9 +1,16 @@
 @import "tailwindcss";
 
+/* next-themes toggles a `.dark` class on <html>; make Tailwind's dark: variant follow it instead of the OS setting */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --color-black-100: #000319;
+  --color-black-200: rgba(17, 25, 40, 0.75);
+  --color-black-300: rgba(255, 255, 255, 0.125);
+  --color-white-100: #bec1dd;
+  --color-white-200: #c1c2d3;
   --color-blue-100: #c1c2d3;
-  --color-purple: #cbacf5;
+  --color-purple: #cbacf9;
 
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
   --animate-first: moveVertical 30s ease infinite;
@@ -96,5 +103,28 @@
         rgba(255, 255, 255, 0.03) 3px,
         transparent 3px);
     background-size: 80px 80px;
+  }
+}
+
+@layer base {
+  body {
+    background-color: #000319;
+    color: #fff;
+  }
+}
+
+@layer components {
+  .heading {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .heading {
+      font-size: 3rem;
+      line-height: 1;
+    }
   }
 }

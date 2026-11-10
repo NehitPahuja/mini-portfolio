@@ -46,10 +46,13 @@ export const BentoGridItem = ({
 }) => {
   const [copied, setCopied] = useState(false);
 
-  const handleCopy = () => {
-    const text = "nehitpahuja@gmail.com";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText("nehitpahuja@gmail.com");
+      setCopied(true);
+    } catch {
+      // Clipboard can be unavailable (insecure context / permissions); fail silently.
+    }
   };
 
   return (
@@ -60,28 +63,29 @@ export const BentoGridItem = ({
       )}
       style={{
         background: "rgb(4,7,29)",
-        backgroundColor:
+        backgroundImage:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
-      <div className={`${id === 6 && "flex justify-center"} h-full`}>
+      <div className={cn("h-full", id === 6 && "flex justify-center")}>
         <div className="w-full h-full absolute">
           {img && (
             <img
               src={img}
-              alt={img}
+              alt=""
+              aria-hidden="true"
               className={cn(imgClassName, "object-cover object-center ")}
             />
           )}
         </div>
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
-            } `}
+          className={cn("absolute right-0 -bottom-5", id === 5 && "w-full opacity-80")}
         >
           {spareImg && (
             <img
               src={spareImg}
-              alt={spareImg}
+              alt=""
+              aria-hidden="true"
               className="object-cover object-center w-full h-full"
             />
           )}
@@ -136,14 +140,6 @@ export const BentoGridItem = ({
           )}
           {id === 6 && (
             <div className="mt-5 relative">
-              <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
-              >
-                {/* <img src="/confetti.gif" alt="confetti" /> */}
-                {/* <Lottie options={defaultOptions} height={200} width={400} /> */}
-              </div>
-
               <MagicButton
                 title={copied ? "Email is Copied!" : "Copy my email address"}
                 icon={<IoCopyOutline />}
