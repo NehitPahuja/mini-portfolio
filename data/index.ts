@@ -72,14 +72,22 @@ export const gridItems = [
 export const projects = [
     {
         id: 1,
-        title: "Basic Resume Builder",
-        des: "A lightweight, browser-based resume builder to quickly draft a professional CV and export it as a PDF.",
-        img: "/r2.png",
-        iconLists: ["/js.svg", "/css.svg", "/html.svg"],
-        link: "https://github.com/NehitPahuja/Basic-Resume-Builder",
+        title: "MinuteMind",
+        des: "A desktop app that records meetings on your own PC, transcribes them live and keeps notes, with everything stored locally.",
+        img: "/minutemind.png",
+        iconLists: ["/re.svg", "/ts.svg", "/tail.svg"],
+        link: "https://github.com/NehitPahuja/MinuteMind",
     },
     {
         id: 2,
+        title: "SAR Narrative Generator",
+        des: "A team hackathon AML compliance platform that helps analysts generate Suspicious Activity Reports with a full audit trail.",
+        img: "/sar.png",
+        iconLists: ["/re.svg", "/ts.svg", "/tail.svg"],
+        link: "https://github.com/Aryan27-max/SAR-System",
+    },
+    {
+        id: 3,
         title: "Github Language Detector",
         des: "A single-page dashboard that showcases GitHub repository language statistics.",
         img: "/r3.png",
@@ -87,20 +95,12 @@ export const projects = [
         link: "https://github.com/NehitPahuja/Github-Language-Detector",
     },
     {
-        id: 3,
+        id: 4,
         title: "ReXchange",
         des: "ReXchange is a campus marketplace prototype tailored for university students who want to swap or sell second-hand items around campus.",
         img: "/r1.png",
         iconLists: ["/html.svg", "/css.svg", "/java.svg"],
         link: "https://github.com/NehitPahuja/ReXchange",
-    },
-    {
-        id: 4,
-        title: "Coming soon...",
-        des: "",
-        img: "/white.png",
-        iconLists: [],
-        link: "https://github.com/NehitPahuja",
     },
 ];
 
