@@ -96,11 +96,11 @@ export const projects = [
     },
     {
         id: 4,
-        title: "ReXchange",
-        des: "ReXchange is a campus marketplace prototype tailored for university students who want to swap or sell second-hand items around campus.",
-        img: "/r1.png",
-        iconLists: ["/html.svg", "/css.svg", "/java.svg"],
-        link: "https://github.com/NehitPahuja/ReXchange",
+        title: "Morph",
+        des: "A local file converter for Windows that converts audio, video, images and PDF pages from its own window or Explorer's right-click menu.",
+        img: "/morph.png",
+        iconLists: ["/csharp.svg"],
+        link: "https://github.com/NehitPahuja/morph",
     },
 ];
 
