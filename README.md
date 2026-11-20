@@ -1,4 +1,4 @@
-````markdown
+
 # Mini Portfolio 🌟
 
 A simple and modern **personal portfolio website** built to showcase your skills, projects, and contact information. It’s designed to be clean, responsive, and visually appealing — perfect for sharing your work with employers, friends, or collaborators.
